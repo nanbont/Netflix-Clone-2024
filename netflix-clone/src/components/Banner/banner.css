@@ -7,7 +7,7 @@
 }
 .banner__contents {
 	margin-left: 30px;
-	padding-top: 300px;
+	padding-top: 200px;
 	/* height: 190px; */
 }
 .banner__title {
@@ -22,7 +22,27 @@
 	font-size: 1rem;
 	max-width: 360px;
 	height: 80px;
+	font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+
+	webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background: #f3f3f3; */
+    /* color: #333; */
+    /* direction: ltr; */
+   
+    /* font-size: 16px; */
+
+
+	color: #fff;
+    font-size: 16px;
+    margin-top: .1vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+    transition-delay: 0s;
+    transition-duration: .75s;
+    width: 100%;
 }
+
+
 .banner__button {
 	cursor: pointer;
 	color: #fff;
