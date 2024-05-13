@@ -93,7 +93,7 @@
 }
 .row__posterContainer {
     position: relative; /* Set the container to relative so the title positions correctly */
-    
+}
 .row__posterTitle {
     color: #fff;
     display: block;
