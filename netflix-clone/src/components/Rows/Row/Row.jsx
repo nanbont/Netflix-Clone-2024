@@ -56,32 +56,33 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
     return (
         <div className="row">
+             <div className="row">
             <h2>{title}</h2>
             <button className="row__arrow row__arrowLeft" onClick={() => handleScroll('left')}>
                 <FontAwesomeIcon icon={faChevronLeft} />
             </button>
             <div className="row__posters" ref={rowRef}>
-    {movies.map((movie, index) => (
-        <div key={index} className="row__posterContainer">
-            <img
-                className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`}
-                onClick={() => handleClick(movie)}
-                src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
-                alt={movie.name}
-            />
-            <div className="row__posterTitle">{movie.name}</div>
-        </div>
-    ))}
-</div>
+                {movies.map((movie) => (
+                    <div key={movie.id} className="row__posterContainer">
+                        <img
+                            className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`}
+                            onClick={() => handleClick(movie)}
+                            src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
+                            alt={movie.name}
+                        />
+                        <div className="row__posterTitle">{movie?.title || movie?.name || movie?.original_name}</div>
 
+                    </div>
+                ))}
+            </div>
             <button className="row__arrow row__arrowRight" onClick={() => handleScroll('right')}>
                 <FontAwesomeIcon icon={faChevronRight} />
             </button>
-            {trailerUrl && (
-                <YouTube videoId={trailerUrl} opts={opts} />
-            )}
+            {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+        </div>
         </div>
     );
 }
+
 
 export default Row;

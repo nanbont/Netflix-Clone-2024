@@ -22,7 +22,7 @@
 
 .row__posters {
     display: flex;
-    offset-distance: 0px;
+   
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 10px;
